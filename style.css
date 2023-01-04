@@ -1,0 +1,62 @@
+*{
+    
+    margin: 1rem;
+}
+
+h1{
+    padding-bottom: 2rem;
+}
+
+.card
+{
+    background-color: rgb(247, 171, 6);
+    margin: 1rem;
+    padding: 10px;
+    color: white;
+}
+
+.card:hover{
+    background-color: rgb(14, 201, 8);
+    cursor: pointer;
+    transition: ease-in-out;
+}
+
+.no_display h1
+{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 2rem;
+}
+
+.contain
+{
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    padding-left: 4rem;
+}
+
+.box{
+    border: 2px solid;
+    width: 75%;
+    background-color: aliceblue;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
+}
+
+input{
+    background-color: antiquewhite;
+}
+
+.gen
+{
+    background-color: blue;
+}
+
+.custom{
+    font-size: 15px;
+    padding-left: 4rem;
+}

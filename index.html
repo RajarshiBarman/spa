@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJS</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
+</head>
+<body>
+  <center><h1>Welcome to Angular JS Concepts</h1>
+  <div class="box" ng-app="myApp" ng-controller="stdCtrl">
+    Search Options
+    <input type="text" id="anything" placeholder="anything" ng-model="test.$">
+    <input type="text" id="name" placeholder="name" ng-model="test.name">
+    <div class="custom">
+      <p align="left">
+        Custom Filters <br>
+        Male: 🙋🏻‍♂️ ; Female: 🙋🏻‍♀️ ;<br>
+        If age is even ✅ else ❌;
+      </p>
+    </div>
+    <div class="contain">
+      <div class="card" ng-repeat="i in std | filter:test">
+        <p><b>{{i.name}}</b></p>
+        <p>{{i.sec}}</p>
+        <p>{{i.dob}}</p>
+        <p>{{i.gender | genderdetect}}</p>
+        <p>{{i.age | evenage}}</p>
+        <p>{{i.city}}</p>
+      </div>
+    </div>
+    <div class="no_display" ng-show="(std | filter:test).length==0">
+      <h1>Oops No Data!!!</h1>
+    </div>
+  </div></center>
+</body>
+</html>

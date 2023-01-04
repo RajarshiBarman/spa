@@ -1,0 +1,175 @@
+@import 'utilities.css';
+:root
+    {
+        --primary: #F7444E;
+        --dark: #002C3e;
+        --pure:#002C3e;
+        --ternary:#898989;
+        --light:#F2F2F2;
+        --secondary: black;
+        --bg: #FFFFFF;
+        --hi: #F7444E;
+    }
+
+body
+    {
+        font-family: 'Poppins',sans-serif;
+        
+    }
+
+html
+    {
+        scroll-behavior: smooth;   
+    }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialised;
+}
+
+header  
+    {
+        background: var(--bg);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 93%, 0 100%);
+    }
+
+.container
+    {
+        max-width: 1152px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+    
+header nav .left a
+    {
+        color:var(--hi);
+        text-decoration: none;
+        margin-right: 2rem;
+        text-transform: uppercase;
+        transition: all .3s ease;
+    }
+
+header nav .left a:hover
+    {
+        /*color: var(--primary);   #3DCFD3*/
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+header nav
+    {
+        padding: 2rem 0;
+    }
+
+header nav .branding
+    {
+        margin-right: 3rem;
+    }
+
+section
+    {
+        padding: 6rem 0;
+    }
+
+section.about
+    {
+        text-align: justify;
+        color: var(--dark);
+        padding-bottom: 9.3rem;
+    }
+
+section.about h1
+    {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+section.about p
+    {
+        margin-bottom: 2rem;
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+
+
+footer
+    {
+        background: var(--hi);
+        text-align: center;
+        padding: 3rem 0;
+    }
+
+footer .copyright
+{
+    color: var(--bg);
+}
+
+section.services
+    {
+        background: var(--light);
+    }
+section.services .cards
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2rem;
+    }
+
+section.services .cards .card
+    {
+        background: var(--hi);
+        padding: 3rem 2rem;
+        position: relative;
+        text-align: center;
+        transition: all .3s ease;
+    }
+
+
+section.services .cards .card h2
+    {
+        font-weight: 400;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: var(--dark);
+    }
+
+section.services .cards .card p
+    {
+        color: var(--bg);
+        line-height: 1.6rem;
+    }
+
+section.services .cards .card:hover
+    {
+        background: var(--bg);
+    }
+
+section.services .cards .card:hover h2, section.services .cards .card:hover p
+    {
+        color: var(--pure);
+        text-align: center;
+    }
+
+    section
+    {
+        padding: 6rem 0;
+    }
+.section-heading
+    {
+        color: var(--secondary);
+        text-align: center;
+        margin-bottom: 1rem;
+        line-height: 0.5;
+
+    }
+
+.section-heading + p
+    {
+        color: var(--ternary);
+        text-align: center;
+        margin-bottom: 4rem;
+        line-height: 0.5;
+        
+    }

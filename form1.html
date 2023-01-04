@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form1.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="form1">
+        <h1>Form Validation</h1>
+        <form name="myform" action="response.html" method="get" onsubmit="return validateform()">
+            Name: <input type="text" name="name" placeholder="Eg. Rajarshi">
+            <span></span>
+            Phone Number: <input type="number" name="phno" placeholder="Eg. 8617582806">
+            <span></span> 
+            Password: <input type="password" name="password" placeholder="Eg. abC@203D">
+            <span></span>
+            Email-Id: <input type="email" name="email" placeholder="Eg. raj@christuniversity.in">
+            <span></span>
+            Uname: <input type="text" name="uname" placeholder="RajZeus">
+            <span></span>
+            DOB <input type="date" name="date">
+            <input type="submit" value="register">
+        </form>
+    </div>
+</body>
+<script>
+    function validateform()
+        {
+            var name=document.myform.name.value;
+            var phno=document.myform.phno.value;
+            var password=document.myform.password.value;
+            var email=document.getElementsByName('email');
+            var uname=document.getElementsByName('uname');
+            var span=document.getElementsByTagName('span');
+            
+            if(name==null||name=="")
+                {
+                    alert("Name can't be blank")
+                    return false;
+                }
+            var letters = /^[a-zA-Z]+$/;
+            if(!name.match(letters))
+                {
+                    alert('Please input characters only');
+                    return false;
+                }
+            if(phno.length<10)
+                {
+                    alert("Phone Number must be of 10 digits only");
+                    return false;
+                }
+            if(password.length<8 && !password.value.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!/|@$%^&*-]).{8,}$/))
+                {
+                    alert("Password must be of at least 8 characters long and must have atleast 1 small and capital letter");
+                    return false;
+                }
+
+            email.onkeydown=function()
+                {
+                    const regex1=/^([a-z0-9\.-]+)@([a-z0-9]+)\.([a-z]{1,8})$/;
+                    const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\.([a-z]{1,8})(.[a-z]{1,8})$/;
+                    if(!regex1.test(email.value)||regex2.test(email.value))
+                        {
+                        span[0].innerText="Invalid Email Id";
+                        span[0].style.color="red";
+                        }
+                }
+            if(uname==null)
+                {
+                    alert("User Name can't be blank")
+                    return false;
+                }
+        }
+</script>
+</html>

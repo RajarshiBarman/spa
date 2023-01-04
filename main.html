@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myApp2">
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+    <script src="spa.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="flex items-center justify-between">
+                <div class="left flex items-center">
+                    <div class="branding">
+                        <img src="./logo11a.jpg" height="50px" width="50px" alt=""><br>
+                    </div>
+                    <div>
+                        <a href="#/">About</a>
+                        <a href="#services">Services</a>
+                        <a href="#other">Other</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="#cont"><button class="btn btn-primary">Contact</button></a>
+                </div>
+            </nav> 
+        </div>
+    </header>
+
+    <ng-view>
+        
+    </ng-view>
+</body>
+</html>
